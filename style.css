@@ -1,0 +1,214 @@
+:root {
+   font-size: 62.5%; /* font-size default 10px */
+
+   /* Backgrounds */
+   --bg-1: #EFEFEF; /* body */
+   --bg-2: #535971; /* body before */
+   --bg-3: #fff;    /* form */
+   --bg-4: #FF5374; /* input:submit */
+
+   /* font-family */
+   --ff-primary: 'Staatliches'; /* h1, h2 e button */
+   --ff-secondary: 'Poppins';   /* p e label */
+
+   /* color */
+   --color-1: #fff;     /* h1, p, button */
+   --color-2: #535971;  /* legend h2 */
+   --color-3: #4E4958;  /* label */
+   --color-4: #C1BCCC;  /* label span */
+
+}
+
+* { /* reset css */ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: var(--bg-1);
+    
+    font-family: var(--ff-secondary);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    min-height: 25rem;
+    background-color: var(--bg-2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.page {
+    max-width: 95%;
+    margin: 5rem auto;
+    display: grid;
+    gap: 3rem;
+    
+}
+
+header {
+    display: grid;
+    gap: 2rem;
+
+    padding-left: 1rem;
+
+    color: var(--color-1);
+}
+
+header h1 {
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    
+    font-size: 3.6rem;
+}
+
+header p {
+    max-width: 80%;
+    
+    text-align: left;
+}
+
+/* Formulário */
+form {
+    display: grid;
+    gap: 3rem;
+
+    padding: 3rem;
+    
+    background-color: var(--bg-3);
+    
+    border-radius: 2rem 2rem 0 0;
+}
+
+fieldset {
+    border: none;
+    
+    display: grid;
+    gap: 10px;
+}
+
+fieldset legend {
+    font-family: var(--ff-primary);
+    font-size: 2rem;
+    
+    text-transform: uppercase;
+
+    color: var(--color-2);
+    
+    border-bottom: 1px solid #E6E6F0;
+
+    width: 100%;
+}
+
+fieldset .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 5px 2px;    
+}
+
+
+
+fieldset .input-wrapper label {
+    color: var(--color-3);
+}
+
+fieldset .input-wrapper label span {
+    color: var(--color-4);
+}
+
+fieldset .input-wrapper input {
+    min-height: 4rem;
+
+    padding: 5px;
+
+    background: #FAFAFC;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    color: var(--color-4);
+}
+
+fieldset .input-wrapper input:focus {
+    outline: 1px solid var(--color-4);
+}
+
+
+/* Form Horario disponinveis */
+.mentoria h2 {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.8rem;
+
+    color: var(--color-2);
+
+    margin-top: 1rem;
+}
+
+.mentoria .hora-mentoria .input-wrapper:first-child {
+    grid-area: data;
+}
+
+.mentoria .hora-mentoria .input-wrapper:first-child + .input-wrapper {
+    grid-area: das;
+}
+
+.mentoria .hora-mentoria .input-wrapper:last-child {
+    grid-area: ate;
+}
+
+.mentoria .hora-mentoria {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "data" "das" "ate"; 
+}
+
+main > div:last-of-type {
+    background-color: var(--bg-2);
+    
+    border-radius: 0px 0px 20px 20px;
+    
+    min-height: 10rem;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+main > div:last-of-type > input {    
+    background-color: var(--bg-4);
+    padding: 1rem;
+    width: 80%;
+    
+    border: none;
+    border-radius: 1rem;
+    
+    text-align: center;
+    font-family: var(--ff-primary);
+    
+    color: var(--color-1);
+}
+
+@media (min-width:390px) {
+    .mentoria .hora-mentoria {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "data das ate" ;  
+        align-items: end;    
+    }
+}
