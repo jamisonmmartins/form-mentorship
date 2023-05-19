@@ -17,6 +17,12 @@
    --color-3: #4E4958;  /* label */
    --color-4: #C1BCCC;  /* label span */
 
+    /* Font Size */
+    --fs-h1: 3.6rem;
+    --fs-h2: 1.8rem;
+    --fs-legend: 2rem;
+    --fs-text: 1.2rem;
+    --fs-button: 1.4rem;
 }
 
 * { /* reset css */ 
@@ -26,19 +32,20 @@
 }
 
 body {
-    width: 100%;
+    max-width: 1440px;
     background-color: var(--bg-1);
     
     font-family: var(--ff-secondary);
-    font-size: 1.2rem;
+    font-size: var(--fs-text);
     font-weight: 400;
 
-    
+    margin: auto;
 }
 
 body::before {
     content: '';
-    width: 100%;
+    min-width: 100%;
+    max-width: 1440px;
     min-height: 25rem;
     background-color: var(--bg-2);
     position: absolute;
@@ -48,11 +55,11 @@ body::before {
 }
 
 .page {
-    max-width: 95%;
+    padding: 0 1rem;
+    max-width: 360px;
     margin: 5rem auto;
     display: grid;
     gap: 3rem;
-    
 }
 
 header {
@@ -71,7 +78,7 @@ header h1 {
     font-family: var(--ff-primary);
     font-weight: 400;
     
-    font-size: 3.6rem;
+    font-size: var(--fs-h1);
 }
 
 header p {
@@ -101,7 +108,7 @@ fieldset {
 
 fieldset legend {
     font-family: var(--ff-primary);
-    font-size: 2rem;
+    font-size: var(--fs-legend);
     
     text-transform: uppercase;
 
@@ -152,7 +159,7 @@ fieldset .input-wrapper input:focus {
 .mentoria h2 {
     font-family: var(--ff-primary);
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: var(--fs-h2);
 
     color: var(--color-2);
 
@@ -196,6 +203,8 @@ main > div:last-of-type > input {
     padding: 1rem;
     width: 80%;
     
+    font-size:var(--fs-button);
+
     border: none;
     border-radius: 1rem;
     
@@ -210,5 +219,54 @@ main > div:last-of-type > input {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas: "data das ate" ;  
         align-items: end;    
+    }
+
+    .page {
+        max-width: 480px;
+    }
+
+    main fieldset:first-of-type {
+        display: grid;
+        grid-template-columns: 
+        minmax(12rem, 15rem) 1fr;
+        
+        grid-template-areas: 
+        "nome sobrenome" 
+        "email email" 
+        "senha senha";
+    }
+
+    main fieldset:first-of-type .input-wrapper:nth-of-type(1) {
+        grid-area: nome;
+    }
+
+    main fieldset:first-of-type .input-wrapper:nth-of-type(2) {
+        grid-area: sobrenome;
+    }
+
+    main fieldset:first-of-type .input-wrapper:nth-of-type(3) {
+        grid-area: email;
+    }
+
+    main fieldset:first-of-type .input-wrapper:nth-of-type(4) {
+        grid-area: senha;
+    }
+}
+
+@media (min-width:768px) {
+    :root {
+        --fs-h1:4.8rem;
+        --fs-h2: 2.6rem;
+        --fs-text: 1.6rem;
+        --fs-legend: 3rem;
+        --fs-button: 2rem;
+    }
+
+    body:before {
+        min-height: 300px;
+    }
+
+    .input-wrapper {
+        min-height: 5rem;
     }
 }
