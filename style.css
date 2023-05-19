@@ -217,18 +217,11 @@ main > div:last-of-type > input {
 
 @media (min-width:390px) {
 
-    /*
-    .mentoria .hora-mentoria {
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-areas: "data das ate" ;  
-        align-items: end;    
-    }
-    */
-
+    
     .page {
         max-width: 480px;
     }
-
+    
     main fieldset:first-of-type {
         display: grid;
         grid-template-columns: 
@@ -239,22 +232,29 @@ main > div:last-of-type > input {
         "email email" 
         "senha senha";
     }
-
+    /*
+    .mentoria .hora-mentoria {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "data das ate" ;  
+        align-items: end;    
+    }
+    
     main fieldset:first-of-type .input-wrapper:nth-of-type(1) {
         grid-area: nome;
     }
-
+    
     main fieldset:first-of-type .input-wrapper:nth-of-type(2) {
         grid-area: sobrenome;
     }
-
+    
     main fieldset:first-of-type .input-wrapper:nth-of-type(3) {
         grid-area: email;
     }
-
+    
     main fieldset:first-of-type .input-wrapper:nth-of-type(4) {
         grid-area: senha;
     }
+    */
 }
 
 @media (min-width:768px) {
