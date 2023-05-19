@@ -156,6 +156,10 @@ fieldset .input-wrapper input:focus {
 
 
 /* Form Horario disponinveis */
+.mentoria {
+    border: 2px dashed blue;
+}
+
 .mentoria h2 {
     font-family: var(--ff-primary);
     font-weight: 400;
