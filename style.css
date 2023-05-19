@@ -215,12 +215,15 @@ main > div:last-of-type > input {
 }
 
 @media (min-width:390px) {
+
+    /*
     .mentoria .hora-mentoria {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas: "data das ate" ;  
         align-items: end;    
     }
-
+    */
+    
     .page {
         max-width: 480px;
     }
