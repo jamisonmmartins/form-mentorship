@@ -213,7 +213,7 @@ main > div:last-of-type > input {
     
     color: var(--color-1);
 }
-
+/*
 @media (min-width:390px) {
     .mentoria .hora-mentoria {
         grid-template-columns: 2fr 1fr 1fr;
@@ -252,7 +252,7 @@ main > div:last-of-type > input {
         grid-area: senha;
     }
 }
-
+*/
 @media (min-width:768px) {
     :root {
         --fs-h1:4.8rem;
