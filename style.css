@@ -48,6 +48,7 @@ body::before {
     max-width: 1440px;
     min-height: 25rem;
     background-color: var(--bg-2);
+    background-color: aquamarine;
     position: absolute;
     top: 0;
     left: 0;
