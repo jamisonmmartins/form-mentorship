@@ -48,7 +48,6 @@ body::before {
     max-width: 1440px;
     min-height: 25rem;
     background-color: var(--bg-2);
-    background-color: aquamarine;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +55,7 @@ body::before {
 }
 
 .page {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     max-width: 360px;
     margin: 5rem auto;
     display: grid;
@@ -101,7 +100,7 @@ form {
 }
 
 fieldset {
-    border: none;
+    border: 2px solid orange;
     
     display: grid;
     gap: 10px;
@@ -217,6 +216,7 @@ main > div:last-of-type > input {
 
 @media (min-width:390px) {
 
+    /*
     
     .page {
         max-width: 480px;
@@ -232,7 +232,7 @@ main > div:last-of-type > input {
         "email email" 
         "senha senha";
     }
-    /*
+    
     .mentoria .hora-mentoria {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas: "data das ate" ;  
@@ -254,7 +254,6 @@ main > div:last-of-type > input {
     main fieldset:first-of-type .input-wrapper:nth-of-type(4) {
         grid-area: senha;
     }
-    */
 }
 
 @media (min-width:768px) {
@@ -265,13 +264,14 @@ main > div:last-of-type > input {
         --fs-legend: 3rem;
         --fs-button: 2rem;
     }
-
+    
     body:before {
         min-height: 300px;
         background-color: pink;
     }
-
+    
     .input-wrapper {
         min-height: 5rem;
     }
+    */
 }
