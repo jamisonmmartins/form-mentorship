@@ -139,7 +139,7 @@ fieldset .input-wrapper label span {
 
 fieldset .input-wrapper input {
     min-height: 4rem;
-
+    width: 100%;
     padding: 5px;
 
     background: #FAFAFC;
